@@ -61,7 +61,7 @@ class App : PluginApplication() {
             override fun ignoreRequest(originRequest: Request): Boolean {
                 return /*UserModel.userJson == null *//*未登录的情况下, 忽略所有请求的token检查*//*
                         ||*/ !RNetwork.isConnect(app()) /*无网络*/
-                        || originRequest.url().toString().contains("Authentication")
+                        || originRequest.url.toString().contains("Authentication")
             }
 
             override fun isTokenInvalid(response: Response, bodyString: String): Boolean {
