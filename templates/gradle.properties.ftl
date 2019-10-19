@@ -15,7 +15,7 @@ org.gradle.jvmargs=-Xmx2048M -Dkotlin.daemon.jvm.options\="-Xmx2048M"
 kotlin.code.style=official
 
 org.gradle.parallel=true
-android.enableR8=true
+android.enableR8=false
 android.enableD8=true
 
 android.useAndroidX=true
