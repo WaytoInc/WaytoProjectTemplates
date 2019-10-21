@@ -11,9 +11,18 @@ apply from: allGradle.key
 
 android {
     defaultConfig {
-        buildConfigField "String", "CUSTOM_URL", '"http://116.7.249.36:17100/"'
+       buildConfigField "String", "CUSTOM_URL", '"http://116.7.249.34:17100/"'
+//     buildConfigField "String", "CUSTOM_URL", '"https://xhsimapi.wayto.com.cn/"'
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+       buildConfigField "String", "MQTT_URL", '"tcp://xhsimapi.wayto.com.cn:1883"'
+       buildConfigField "String", "MQTT_VISITOR", '"wxvisual/topic/rz/app"'
+
+       buildConfigField "String", "MQTT_TELEPHONE", '"wxvisual/topic/user/"' //{userId}
+
+       buildConfigField "String", "AGORA_APPID", '"960644f3218845e5aef0ab9166256473"'
+       buildConfigField "String", "AGORA_APPCERT", '"9f944e8c86e0428fa413c22001b95d4c"'
+
+       testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     productFlavors {
@@ -41,6 +50,7 @@ dependencies {
     implementation project(allModule.plugin)
     implementation project(allModule.objectbox)
 //    implementation project(allModule.Camera)
+//    implementation project(allModule.agora)
 //    implementation project(allModule.tesstwo)
 //    implementation project(allModule.opencv)
 //    implementation project(allModule.ex)

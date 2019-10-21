@@ -36,16 +36,6 @@ import java.util.concurrent.CountDownLatch
 
 class App : PluginApplication() {
 
-    companion object {
-        var baseAppUrl: String? = null
-            get() {
-                if (field != null) {
-                    return field
-                }
-                return BuildConfig.CUSTOM_URL
-            }
-    }
-
     override fun getTokenListener(): TokenInterceptor.OnTokenListener {
         return object : TokenInterceptor.TokenListenerAdapter() {
             override fun initToken(originRequest: Request): Request {
@@ -100,7 +90,7 @@ class App : PluginApplication() {
     }
 
     override fun getBaseUrl(): String {
-        return baseAppUrl!!
+        return appBaseUrl ?: BuildConfig.CUSTOM_URL
     }
 
     override fun getScheme(): String {
