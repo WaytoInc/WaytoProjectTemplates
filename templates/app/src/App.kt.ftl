@@ -103,6 +103,13 @@ class App : PluginApplication() {
         L.init(BuildConfig.SHOW_DEBUG, scheme)
 
         RBox.init(this, BuildConfig.PLUGIN_NAME, BuildConfig.SCHEMA, BuildConfig.SHOW_DEBUG)
+
+       //GlideImageView.glideHeaderConfig = { _, header ->
+       //     header["Authorization"] = "Bearer ${UserHelper.loginBean?.access_token}"
+       // }
+
+       // LoginVal.baseUrlConfigList =
+       //     mutableListOf(BuildConfig.CUSTOM_URL1, BuildConfig.CUSTOM_URL2, BuildConfig.CUSTOM_URL3)
     }
 
     override fun onCreateOnce() {
