@@ -3,6 +3,7 @@
 apply from: './wayto.core/lib/find_module.gradle'
 apply from: allGradle.androidx
 apply from: allGradle.qiniu
+apply from: allGradle.pgyer
 
 buildscript {
     repositories {
