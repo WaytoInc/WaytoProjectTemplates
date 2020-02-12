@@ -7,6 +7,8 @@ apply from: allGradle.pgyer
 
 buildscript {
     repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+
         google()
         jcenter()
         maven { url 'https://jitpack.io' }
@@ -29,6 +31,8 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+
         google()
         jcenter()
         maven { url 'https://jitpack.io' }
